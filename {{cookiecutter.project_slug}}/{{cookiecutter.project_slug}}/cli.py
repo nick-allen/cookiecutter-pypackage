@@ -4,7 +4,7 @@ import click
 
 
 @click.command()
-def main(args=None):
+def main():
     """Console script for {{cookiecutter.project_slug}}"""
     click.echo("Replace this message by putting your code into "
                "{{cookiecutter.project_slug}}.cli.main")

@@ -1,5 +1,5 @@
-Welcome to {{ cookiecutter.project_name }}'s documentation!
-======================================
+{{ cookiecutter.project_name }}
+{% for _ in cookiecutter.project_name %}={% endfor %}
 
 Contents:
 
@@ -7,15 +7,3 @@ Contents:
    :maxdepth: 2
 
    readme
-   installation
-   usage
-   contributing
-   {% if cookiecutter.create_author_file == 'y' -%}authors
-   {% endif -%}history
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
