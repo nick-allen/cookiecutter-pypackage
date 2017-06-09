@@ -25,7 +25,6 @@ with open('README.rst') as readme_file:
 
 setup(
     name='{{ cookiecutter.project_slug }}',
-    version='{{ cookiecutter.version }}',
     description="{{ cookiecutter.project_short_description }}",
     long_description=README,
     author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
