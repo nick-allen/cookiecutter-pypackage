@@ -21,6 +21,7 @@ if __name__ == '__main__':
     shell_commands = [
         'cd {}'.format(PROJECT_DIRECTORY),
         'git init',
+        'git add --all',
         'git commit -am "Initial commit"'
     ]
 
