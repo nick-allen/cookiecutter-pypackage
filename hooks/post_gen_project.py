@@ -18,4 +18,10 @@ if __name__ == '__main__':
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')
 
-    subprocess.call('cd {} && git init'.format(PROJECT_DIRECTORY), shell=True)
+    shell_commands = [
+        'cd {}'.format(PROJECT_DIRECTORY),
+        'git init',
+        'git commit -am "Initial commit"'
+    ]
+
+    subprocess.call(' && '.join(shell_commands), shell=True)
