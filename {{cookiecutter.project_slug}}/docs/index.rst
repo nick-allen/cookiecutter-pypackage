@@ -1,9 +1,13 @@
-{{ cookiecutter.project_name }}
-{% for _ in cookiecutter.project_name %}={% endfor %}
+.. include::
+    ../README.rst
 
-----------
+API Docs
+--------
+
+Full package API documentation
 
 .. toctree::
-   :maxdepth: 2
+   :titlesonly:
 
-   readme
+   apidoc/{{ cookiecutter.project_slug }}
+

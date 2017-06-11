@@ -4,6 +4,7 @@
 import datetime
 import sys
 import os
+import shutil
 
 project_root = os.path.dirname(os.path.dirname(__file__))
 
@@ -13,6 +14,13 @@ project_root = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, project_root)
 
 import {{ cookiecutter.project_slug }}
+from sphinx.apidoc import main
+
+apidoc_dir = './apidoc'
+if os.path.isdir(apidoc_dir):
+        shutil.rmtree(apidoc_dir)
+
+        main(['-f', '-T', '-e', '-M', '-o', apidoc_dir, '../{{ cookiecutter.project_slug }}'])
 
 # -- General configuration ---------------------------------------------
 
